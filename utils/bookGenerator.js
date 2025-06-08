@@ -35,7 +35,7 @@ export function generateBooks({ lang, seed, page, likes, reviews }) {
             text: faker.lorem.sentence()
         }));
 
-        const coverImage = faker.image.urlLoremFlickr({ category: 'book', width: 200, height: 300 });
+        const coverImage = `https://picsum.photos/seed/${seed + index}/200/300`;
 
         books.push({
             index,
@@ -47,6 +47,7 @@ export function generateBooks({ lang, seed, page, likes, reviews }) {
             reviews: bookReviews,
             coverImage
         });
+
     }
 
     return books;
